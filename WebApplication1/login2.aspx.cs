@@ -36,7 +36,7 @@ namespace WebApplication1
                 SqlCommand cmd = new SqlCommand(q,con);
                 SqlDataReader reader = cmd.ExecuteReader();
 
-                string name = "", pass = "",ram="",amdcdci2="";
+                string name = "", pass = "",ram="",amdc2="";
                 while (reader.Read())
                 {
 
