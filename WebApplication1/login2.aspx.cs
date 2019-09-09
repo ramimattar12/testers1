@@ -41,7 +41,7 @@ namespace WebApplication1
                 {
 
                         // Adding Session to your page
-                        
+                        //add command
                         
                         name = reader["username"].ToString();
                         pass = reader["password"].ToString();
