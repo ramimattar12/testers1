@@ -36,7 +36,7 @@ namespace WebApplication1
                 SqlCommand cmd = new SqlCommand(q,con);
                 SqlDataReader reader = cmd.ExecuteReader();
 
-                string name = "", pass = "", rrr = "", bbb = "" ;
+                string name = "", pass = "", rrr = "", bbbs = "" ;
                 while (reader.Read())
                 {
 
