@@ -22,7 +22,7 @@ namespace WebApplication1
         {
 
         }
-        public string connection = "Data Source=st1204;Initial Catalog=test;Integrated Security=True";
+        public string connection = "Data Source=lenovorami;Initial Catalog=test;Integrated Security=True";
         //public string connection = "server = st1204;database = test;integrated security=True";
         protected void btnlogin_Click(object sender, EventArgs e)
         {
@@ -36,11 +36,11 @@ namespace WebApplication1
                 SqlCommand cmd = new SqlCommand(q,con);
                 SqlDataReader reader = cmd.ExecuteReader();
 
-                string name = "", pass = "",rrr="",bbb="";
+                string name = "", pass = "";
                 while (reader.Read())
                 {
 
-                        // Adding Session to your page
+                        
                         
                         
                         name = reader["username"].ToString();
