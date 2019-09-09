@@ -36,13 +36,13 @@ namespace WebApplication1
                 SqlCommand cmd = new SqlCommand(q,con);
                 SqlDataReader reader = cmd.ExecuteReader();
 
-                string name = "", pass = "";
+                string name = "", pass = "", rrr = "", bbb = "" ;
                 while (reader.Read())
                 {
 
                         
                         
-                        
+                       
                         name = reader["username"].ToString();
                         pass = reader["password"].ToString();
                         if (txtname.Text == name && txtpass.Text == pass)
