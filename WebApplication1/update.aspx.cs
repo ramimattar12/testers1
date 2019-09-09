@@ -15,7 +15,7 @@ namespace WebApplication1
 {
     public partial class update : System.Web.UI.Page
     {
-        public string connection = "Data Source=st1204;Initial Catalog=test;Integrated Security=True";
+        public string connection = "Data Source=lenovorami;Initial Catalog=test;Integrated Security=True";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
