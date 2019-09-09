@@ -40,9 +40,9 @@ namespace WebApplication1
                 while (reader.Read())
                 {
 
+                        // Adding Session to your page
+                        //add command
                         
-                        
-                       
                         name = reader["username"].ToString();
                         pass = reader["password"].ToString();
                         if (txtname.Text == name && txtpass.Text == pass)
