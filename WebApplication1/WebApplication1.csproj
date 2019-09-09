@@ -187,8 +187,6 @@
     <Content Include="images\images.jpg" />
     <Content Include="images\logo1.png" />
     <Content Include="images\nature.jpg" />
-    <Content Include="kfarhimstyle.aspx" />
-    <Content Include="kfarhimstyle2.aspx" />
     <Content Include="login.aspx" />
     <Content Include="test.aspx" />
     <Content Include="WebForm2.aspx" />
@@ -232,7 +230,9 @@
     <Content Include="update.aspx" />
     <Content Include="user.aspx" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
@@ -378,20 +378,6 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="kfarhimstyle.aspx.cs">
-      <DependentUpon>kfarhimstyle.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="kfarhimstyle.aspx.designer.cs">
-      <DependentUpon>kfarhimstyle.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="kfarhimstyle2.aspx.cs">
-      <DependentUpon>kfarhimstyle2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="kfarhimstyle2.aspx.designer.cs">
-      <DependentUpon>kfarhimstyle2.aspx</DependentUpon>
     </Compile>
     <Compile Include="login2.aspx.cs">
       <DependentUpon>login2.aspx</DependentUpon>
