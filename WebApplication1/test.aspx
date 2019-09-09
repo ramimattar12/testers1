@@ -10,103 +10,154 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Sidebar Menu</title>
     <style>
-        .sidebar{
-            position: fixed;
-            height: 100vh;
-            width: 80%;
-            background-color: rgb(212, 212, 250);
-            top: 0;
-            left: 0;
-            z-index: 20;
-        }
 
-        .sidemenu{
-            padding-top: 120px;
-            list-style-type: upper-alpha;
-            font-size: 16x;
-        }
-        .navbar{
-            position: relative;
-            top: 0;
-            width: 100%;
-            height: 100px;
-            background-color: blueviolet;
-            z-index: 30;
-        }
-        body{
-            margin: 0;
-        }
-
-        .container-fluid{
-            position: relative;
-            background-color: rgb(94, 241, 241);
-            height: 100vh;
-            z-index: 10;
-        }
 
 
     </style>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+    <script>
+        $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function () {
+            var next = $(this).next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+
+            for (var i = 0; i < 4; i++) {
+                next = next.next();
+                if (!next.length) {
+                    next = $(this).siblings(':first');
+                }
+                next.children(':first-child').clone().appendTo($(this));
+            }
+        });
+
+
+
+    </script>
+
 </head>
 <body>
+
     <!-- Image and text -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-          <img src="assets/images/logo.png" height="30" class="d-inline-block align-top" alt="" />
-          
-        </a>
+<div id="carousel-example-multi" class="carousel slide carousel-multi-item v-2" data-ride="carousel">
 
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+  <!--Controls-->
+  <div class="controls-top">
+    <a class="btn-floating" href="#carousel-example-multi" data-slide="prev"><i
+        class="fas fa-chevron-left"></i></a>
+    <a class="btn-floating" href="#carousel-example-multi" data-slide="next"><i
+        class="fas fa-chevron-right"></i></a>
+  </div>
+  <!--/.Controls-->
+
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-multi" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-multi" data-slide-to="1"></li>
+    <li data-target="#carousel-example-multi" data-slide-to="2"></li>
+    <li data-target="#carousel-example-multi" data-slide-to="3"></li>
+    <li data-target="#carousel-example-multi" data-slide-to="4"></li>
+    <li data-target="#carousel-example-multi" data-slide-to="5"></li>
+  </ol>
+  <!--/.Indicators-->
+
+  <div class="carousel-inner v-2" role="listbox">
+
+    <div class="carousel-item active">
+      <div class="col-12 col-md-4">
+        <div class="card mb-2">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img (36).jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title font-weight-bold">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary btn-md btn-rounded">Button</a>
+          </div>
         </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </nav>
-
-    <div class="sidebar collapse animated fadeInLeft" id="navbarToggleExternalContent">
-        <ul class="sidemenu">
-            <li>
-                <a href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li>
-                <a href="#">About Us</a>
-            </li>
-            <li>
-                <a href="#">Contact </a>
-            </li>
-            <li>
-                <a href="#">Help</a>
-            </li>
-            <li>
-                <a href="#">...</a>
-            </li>
-        </ul>
+      </div>
     </div>
-    <div class="container-fluid">
-        <div class="p-4">
-            <h1>Hello world!</h1>
-            <p>Your content goes here...</p>
+    <div class="carousel-item">
+      <div class="col-12 col-md-4">
+        <div class="card mb-2">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img (34).jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title font-weight-bold">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary btn-md btn-rounded">Button</a>
+          </div>
         </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="col-12 col-md-4">
+        <div class="card mb-2">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img (38).jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title font-weight-bold">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary btn-md btn-rounded">Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="col-12 col-md-4">
+        <div class="card mb-2">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img (29).jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title font-weight-bold">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary btn-md btn-rounded">Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="col-12 col-md-4">
+        <div class="card mb-2">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img (30).jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title font-weight-bold">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary btn-md btn-rounded">Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="col-12 col-md-4">
+        <div class="card mb-2">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img (27).jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title font-weight-bold">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary btn-md btn-rounded">Button</a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </div>
+
+</div>
+
+
 </body>
 </html>
