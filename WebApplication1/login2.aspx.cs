@@ -22,7 +22,7 @@ namespace WebApplication1
         {
 
         }
-        public string connection = "Data Source=st1204;Initial Catalog=test;Integrated Security=True";
+        public string connection = "Data Source=lenovorami;Initial Catalog=test;Integrated Security=True";
         //public string connection = "server = st1204;database = test;integrated security=True";
         protected void btnlogin_Click(object sender, EventArgs e)
         {
